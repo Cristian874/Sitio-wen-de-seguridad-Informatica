@@ -1,0 +1,47 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.header{
+
+    background-color: v.$colorheader;
+
+    &__iconos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include m.desktop {
+            display: unset; 
+            
+         }
+    }
+
+    &__contenido{
+    
+        padding: 2rem 4rem;
+
+        @include m.desktop {
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+         }
+
+    }
+    &__logo{
+        width: 15rem;
+    }
+
+    &__menu{
+       width: 5rem;
+       height:5rem;
+
+       &:hover{
+        cursor: pointer;
+       }
+       @include m.desktop { 
+        
+        display: none;
+        }
+    }
+}

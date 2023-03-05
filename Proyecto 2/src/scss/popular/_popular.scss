@@ -1,0 +1,65 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.popular{
+    margin-top: 15rem ;
+
+    &__title{
+        text-align: center;
+    }
+  
+
+    &__grid{
+    
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 3rem; 
+            
+         }
+    }
+
+    &__card{
+        height: 30rem;
+        border-radius: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 0 40px 5px rgba(0 0 0  / 20%);
+    
+    }
+    &__card--uno{
+        @include m.tablet {
+            margin-top: 30rem; 
+            
+         }
+
+    }
+    &__card--dos{
+        margin-top: 5rem;
+        @include m.tablet { 
+            margin-top: 20rem;
+            
+         }
+     
+    }
+    &__card--tres{
+        margin-top: 5rem;
+        @include m.tablet { 
+            margin-top: 10rem;
+         }
+    
+    }
+    &__icono{
+
+        width: 20% ;
+        margin: 0 auto;
+    }
+
+    &__servicio{
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+}

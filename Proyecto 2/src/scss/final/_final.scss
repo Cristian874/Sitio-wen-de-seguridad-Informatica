@@ -1,0 +1,49 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.final{
+    background-color: v.$colorFooter;
+    margin-top: 10rem;
+    background-image: url('../img/footer.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    height: 30rem;
+    background-position:100%;
+
+      
+
+    &__grid{
+     padding: 10rem 0;
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            
+         }
+    }
+
+    &__card{
+        margin-top: 4rem;
+        @include m.tablet {
+            margin-top: 0; 
+            
+         }
+    }
+   
+    &__img{
+        width: 5rem;
+    }
+    &__title,&__heading{
+        text-align: left;
+        font-size: 3rem;
+        margin: 0;
+    }
+    &__title{
+        color: v.$colorAzul;
+    }
+    &__boton{
+        background-color: v.$colorAzul;
+    }
+    
+
+}

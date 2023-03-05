@@ -1,0 +1,66 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.presentacion{
+    margin-top: 10rem;
+
+    &__grid{
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 3rem; 
+            align-items: center;
+            
+         }
+    }
+
+    &__informacion--dos{
+        
+        grid-row:  2 / 7;
+        grid-column:   1 /2;
+    }
+    &__imagen--dos{
+        margin: 5rem 0;
+        grid-row:  2 / 7;
+        grid-column: 2 / 4;
+        @include m.tablet {
+            margin: 0; 
+            
+         }
+    }
+
+    &__heading{
+        text-align: left;    
+    }
+
+    &__punto{
+        width: 1rem;
+        background-color: v.$colorLista;
+    }
+
+    &__lista{
+        padding: 0;
+    }
+    &__link{
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin-top: 3rem;
+        line-height: 1.5;
+        color: v.$colorParrafo;
+        list-style: none;
+        
+     ::before{
+        content: "\2022";
+        color:#4e78f4;
+        font-size: 25px;
+        margin-left: 1rem;
+        margin-top: -1rem;
+        
+     }
+ 
+
+    }
+    &__span{
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,84 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer{
+    margin-top: 40rem;
+    @include m.tablet {
+        margin-top: 10rem; 
+        
+     }
+
+    background-color: v.$colorMorado;
+    padding: 10rem 0;
+
+
+    &__grid{
+        @include m.tablet { 
+            display: grid;
+            grid-template-columns:repeat(4,1fr);
+            gap: 3rem;
+         }
+      
+    }
+
+    &__logo{
+        width: 15rem;
+        margin: 0 auto;
+
+        
+    @include m.tablet {
+        margin: unset; 
+        
+     }
+
+
+    }
+
+    &__card{
+        text-align: center;
+        margin-top: 5rem;
+        @include m.tablet {
+            margin-top: 0;
+            text-align: left; 
+            
+         }
+    }
+
+    &__heading{
+        color: v.$colorBlanco;
+        margin-bottom: 4rem;
+    }
+
+    &__txt{
+        margin: 5rem 0;
+        font-weight: 300;
+    }
+
+    &__iconos{
+        display: flex;
+       gap: 3rem;
+       justify-content: center;
+       @include m.tablet {
+        justify-content: unset; 
+        
+        }
+    }
+    &__icono{
+        &:hover{
+            cursor: pointer;
+        }
+  
+    }
+    &__lista{
+        padding: 0;
+  
+    }
+    &__link{
+        display: block;
+        color: v.$colorBlanco;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-decoration: none;
+    }
+}

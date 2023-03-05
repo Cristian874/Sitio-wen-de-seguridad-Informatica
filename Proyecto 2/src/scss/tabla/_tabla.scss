@@ -1,0 +1,95 @@
+@use '../base/variables'as v;
+@use '../base/mixins' as m;
+
+.tabla{
+
+    margin-top: 10rem;
+
+
+    &__grid{
+        margin-top: 10rem;
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(4,1fr); 
+           
+         }
+    }
+
+    &__heading{
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    &__precio{
+        color: v.$colorBlanco;
+        margin: 0;
+        padding: 0;
+    }
+    &__titular{
+        padding: 1rem;
+        text-align: center;
+       height: 12rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+
+    &__titular--naranja{
+        background-color: v.$colorBoton;
+    }
+    &__titular--rosa{
+        background-color: v.$colorRosa;
+    }
+    &__titular--azul{
+        background-color: v.$colorAzul;
+    }
+
+    &__informacion{
+        display: none;
+    }
+    &__contenido{
+  
+        padding:5rem 3rem;
+    }
+
+    &__contenido--uno{
+        background-color: v.$colorTabla;
+    }
+    &__link{
+        height: 3rem;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 4rem;
+        list-style: none;
+        font-size: 1.7rem;
+
+    }
+
+    &__icono{
+       width: 100%;
+          
+        margin: 0 auto;
+     
+        
+    
+    
+    }
+
+    &__btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__boton{
+        transition-property: background-color;
+        transition-duration:  .5s;
+
+        &:hover{
+            background-color: v.$colorAzul;
+        }
+    }
+
+}

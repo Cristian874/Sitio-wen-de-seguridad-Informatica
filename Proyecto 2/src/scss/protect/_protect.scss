@@ -1,0 +1,42 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.protect{
+    margin-top: 10rem;
+ 
+
+    &__grid{
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 3rem; 
+            align-items: center;
+         }
+    }
+
+    &__title,&__heading{
+        text-align: left;
+    }
+    &__lista{
+        padding: 0;
+    
+    }
+
+    &__contenedor{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    &__img{
+        margin-top: 5rem;
+        @include m.tablet {
+            margin-top: 0; 
+            
+         }
+    }
+
+ 
+
+ 
+}

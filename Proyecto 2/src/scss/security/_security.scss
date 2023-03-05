@@ -1,0 +1,39 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.security{
+
+    margin-top: 10rem;
+
+    &__title{
+        font-size: 3rem;
+        text-align: center;
+    }
+   
+
+    &__grid{
+        margin-top: 5rem;
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            place-items: center;
+            gap: 3rem; 
+            
+         }
+    }
+
+    &__card{
+        display: grid;
+            grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        align-items: center;
+        margin-top: 4rem;
+        @include m.tablet {
+            margin-top: 0; 
+            
+         }
+    }
+    &__titulo{
+        font-size: 2rem;
+    }
+}

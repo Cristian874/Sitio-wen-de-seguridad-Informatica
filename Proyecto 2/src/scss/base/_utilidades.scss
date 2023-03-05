@@ -1,0 +1,27 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.abajo{
+    background-color: v.$colorBlanco;
+    position: fixed;
+    width: 100%;
+}
+
+.link{
+     color: v.$colorNegro !important;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+       font-weight: 300;
+}
+.heading{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.5;
+    @include m.tablet { 
+        font-size: 3rem;
+        
+     }
+}
